@@ -9,25 +9,23 @@ def deleteItem(item):
    toDoDup = []
    for i in toDoList:
       newToDo.append(i)
-      print("There's no duplicates!")
    else:
       toDoDup.append(i)
-      print("we have found duplicates!" + toDoDup)
-   
-   toDoList.remove(item)
+      print("we have found duplicates and removed them!", toDoDup)
+      toDoList.remove(item)
+    
    
 
-userAns = input("Do you want to add to your list ,delete an item, or quit? A/D/Q")
+userAns = input("Do you want to add to your list ,duplicate check, or quit? A/D/Q")
 
 while userAns == "A":
    item = input("What item do you want to add?")
    addItem(item)
-   userAns = input("Do you want to add to your list, delete an item, or quit? A/D/Q")
-   print(toDoList)
+   userAns = input("Do you want to add to your list, duplicate check, or quit? A/D/Q")
+
    if userAns == "D":
-     item = input("What would you like to delete?")
      deleteItem(item)
-     userAns = input("Do you want to add to your list, delete an item, or quit? A/D/Q")
+     userAns = input("Do you want to add to your list, duplicate check, or quit? A/D/Q")
    print(toDoList)
 
 
